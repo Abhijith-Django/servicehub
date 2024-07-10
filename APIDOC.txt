@@ -1,0 +1,100 @@
+1)api for fetching token
+
+    url:http://127.0.0.1:8000/api/token/
+
+    method:POST
+
+    body:{username,password}
+
+    authentication:nil
+
+schema:Customer
+attributes:{
+    name,
+    email,
+    phone,
+    vehicle_number,
+    running_km,
+    technician,
+    status,
+    created_date,
+    updated_date,
+    is_active
+}
+
+2)api for listing all Customer
+
+    url:http://127.0.0.1:8000/api/customers/
+
+    method:GET
+
+    body:nill
+
+    authentication:TokenAuthentication
+
+3)api for create a Customer
+
+    url:http://127.0.0.1:8000/api/customers/
+
+    method:POST
+
+    body:{
+    name,
+    email,
+    phone,
+    vehicle_number,
+    running_km,
+    technician,
+    status,
+    created_date,
+    updated_date,
+    is_active
+}
+
+    authentication:TokenAuthentication
+
+4)api for Customer detail
+
+    url:http://127.0.0.1:8000/api/customers/{id}/
+
+    method:POST
+
+    body:nill
+
+    authentication:TokenAuthentication
+
+5)api for Customer update
+
+    url:http://127.0.0.1:8000/api/customers/{id}/
+
+    method:PUT
+
+    body:{
+    name,
+    email,
+    phone,
+    vehicle_number,
+    running_km,
+    technician,
+    status,
+    created_date,
+    updated_date,
+    is_active
+    }
+
+    authentication:TokenAuthentication
+
+
+6)api for adding works
+
+    url:http://127.0.0.1:8000/api/customers/{id}/add_work/
+
+    method:POST
+
+    body:{
+        title,
+        description,
+        amount
+    }
+
+    authentication:TokenAuthentication
